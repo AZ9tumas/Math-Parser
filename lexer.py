@@ -28,6 +28,9 @@ class Lexer:
             elif self.current_char == '+':
                 tokens.append(Token(type_=TT_PLUS))
                 self.advance()
+            elif self.current_char == '=':
+                tokens.append(Token(type_=TT_EQUALS))
+                self.advance()
             elif self.current_char == '-':
                 tokens.append(Token(type_=TT_MINUS))
                 self.advance()
