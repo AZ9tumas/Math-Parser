@@ -26,13 +26,13 @@ class Lexer:
             elif self.current_char in LETTERS:
                 tokens.append(self.make_identifier())
             elif self.current_char == '+':
-                tokens.append(Token(type_=TT_PLUS))
+                tokens.append(Token(type_=TT_PLUS, value='+'))
                 self.advance()
             elif self.current_char == '=':
                 tokens.append(Token(type_=TT_EQUALS))
                 self.advance()
             elif self.current_char == '-':
-                tokens.append(Token(type_=TT_MINUS))
+                tokens.append(Token(type_=TT_MINUS, value='-'))
                 self.advance()
             else:
                 return f'Error, unsupported token type "{self.current_char}"'

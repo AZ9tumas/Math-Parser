@@ -4,4 +4,4 @@ while True:
     statement = input(">>> ")
     if statement=='exit':exit()
     result = main.run(statement)
-    print(result)
+    print(result and result or '')
